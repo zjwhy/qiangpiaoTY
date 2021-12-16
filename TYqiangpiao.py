@@ -66,9 +66,9 @@ def email_():
     # set_debuglevel(1)可以打印出和SMTP服务器交互的所有信息
     # server.set_debuglevel(1)
     # login()方法用来登录SMTP服务器
-    server.login("17600679010@163.com", "z5487693.")
+    server.login("xxxxx", "xxx.")
     # sendmail()方法就是发邮件，由于可以一次发给多个人，所以传入一个list，邮件正文是一个str，as_string()把MIMEText对象变成str
-    server.sendmail('17600679010@163.com', ['18612018884@163.com', ], msg.as_string())
+    server.sendmail('xxx@163.com', ['xx@163.com', ], msg.as_string())
     print(u"邮件发送成功!")
     server.quit()
 #进行登录下单操作
@@ -90,7 +90,7 @@ def xiadan(web,acct,pwd,name_list=[]):
     # print(size['width'])
     # print(size['height'])
     obj_.crop((x, y, x+right, y+bottm )).save('yanzm.png')
-    yzm = Chaojiying_Client('z5487693', 'z5487693.', '898147')
+    yzm = Chaojiying_Client('xxx', 'xx.', 'xx')
     with open('yanzm.png', 'rb') as f:
         img_b = f.read()
     zuobiao = yzm.PostPic(img_b, 9004)
@@ -174,5 +174,5 @@ if __name__ == '__main__':
     s, e, t, S, E, car_list = s_e()
     web = s_eCar(s,e,t,S,E)
     id_list,new_web = check_car(web,car_list)
-    yuding(new_web,'523917455@qq.com','Zj5487693',id_list,2)
+    yuding(new_web,'xxxx@qq.com','xxxx',id_list,2)
     
